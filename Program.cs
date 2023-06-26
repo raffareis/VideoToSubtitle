@@ -109,7 +109,7 @@ class Program
 
 
         HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Authorization", "Bearer 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");
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + apiKey);
 
         MultipartFormDataContent form = new MultipartFormDataContent();
         form.Add(new StringContent("whisper-1"), "model");
