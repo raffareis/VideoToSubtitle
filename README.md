@@ -1,11 +1,8 @@
-# VideoToSubtitle
-
-VideoToSubtitle is a simple command-line tool that converts video or audio files to subtitle files (SRT) or plain text files (TXT) using the OpenAI API. It supports various video and audio formats and can also translate the transcriptions if needed.
-
 ## Prerequisites
 
 - .NET 7.0 SDK
 - FFmpeg (for video to audio conversion)
+- OpenAI Whisper API Key
 
 ## Installation
 
@@ -26,6 +23,35 @@ cd VideoToSubtitle
 ```bash
 dotnet build
 ```
+
+4. Install FFmpeg:
+
+- Download FFmpeg from the official website: https://ffmpeg.org/download.html
+- Extract the downloaded archive.
+- Add the FFmpeg `bin` folder to your system's PATH environment variable.
+
+For more detailed instructions on installing FFmpeg, please refer to the [official documentation](https://ffmpeg.org/documentation.html).
+
+5. Obtain an OpenAI Whisper API Key:
+
+- Sign up for an OpenAI account if you don't have one: https://beta.openai.com/signup/
+- Follow the instructions in the [OpenAI Help Center](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) to find your secret API key.
+
+6. Set the OpenAI Whisper API Key as an environment variable:
+
+For Windows:
+
+```bash
+setx WHISPER_API_KEY "your_api_key"
+```
+
+For Linux and macOS:
+
+```bash
+export WHISPER_API_KEY="your_api_key"
+```
+
+Make sure to replace `your_api_key` with your actual OpenAI Whisper API Key.
 
 ## Usage
 
